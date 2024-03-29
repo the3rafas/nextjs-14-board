@@ -1,0 +1,29 @@
+query attendanceBoard(
+  $input: AttendanceFilterInput!
+  $pagination: PagenationFilterInput!
+) {
+  attendanceBoard(input: $input, pagination: $pagination) {
+    items {
+      id
+      type
+      user {
+        name
+      }
+      createdAt
+    }
+    total
+  }
+}
+
+query currentUser {
+  currentUser {
+    id
+    name
+    email
+    avatarUrl
+    emailVerified
+    token {
+      token
+    }
+  }
+}

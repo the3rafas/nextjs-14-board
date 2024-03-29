@@ -1,0 +1,11 @@
+query userAttendanceReport($options: UserReportFilterInput!) {
+  userAttendanceReport(options: $options) {
+    items {
+      id
+      name
+      email
+      lastAttendance
+    }
+    total
+  }
+}
